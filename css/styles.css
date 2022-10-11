@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.nav{
+  background-color: rgb(209, 175, 24);
+}
+.navLogo img{
+  width: 200px;
+  height: 50px;
+}
+
+.navMenu ul{
+display: flex;
+list-style: none;
+margin-right: 40px;
+}
+.navMenu ul :hover{
+  color: black;
+  background-color: white;
+  border-radius: 5px;
+}
+
+ .navMenu .navItem{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  padding: 10px 10px;
+}
+.navContainer{
+  display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+.navLabel, .navInput{
+  display: none;
+}
