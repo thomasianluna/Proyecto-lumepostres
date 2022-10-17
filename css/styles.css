@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 .nav{
-  background-color: rgb(209, 175, 24);
+  background-color:  rgba(239, 226, 111, 1);
 }
 .navLogo img{
   width: 200px;
@@ -27,6 +27,8 @@ margin-right: 40px;
   color: black;
   font-weight: bold;
   padding: 10px 10px;
+  font-size: 15px;
+  font-family: 'Imprima';
 }
 .navContainer{
   display: flex;
@@ -36,3 +38,97 @@ margin-right: 40px;
 .navLabel, .navInput{
   display: none;
 }
+
+footer {
+  display: grid;
+  background-color: black;
+  grid-template-columns: 100px 100px;
+  justify-content: center;
+  justify-items: center;
+}
+
+.mainContainerIndex{
+  display: grid;
+  height: 100vh;
+  align-content: center;
+  justify-items: center;
+  grid-template-columns: 100px 1fr 100px;
+  grid-template-rows: 100px 400px 100px;
+  grid-gap: 15px;
+  grid-template-areas: 
+  ". . ."
+  ". tarjeta ."
+  ". descripcion ."
+  ;
+}
+
+.descripcion{
+  grid-area: descripcion;
+  
+}
+.tarjetaIndex{
+ grid-area: tarjeta;
+}
+
+.tarjetaIndex{
+  display: flex;
+  align-items: center;
+  background-color: #f3dda2;
+  border-radius: 20px;
+  /*width: 20vw;*/
+  height: 300px;
+}
+
+.tdp{
+  margin-left: 30px;
+  font-family: 'Titan One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 40px;
+  text-transform: uppercase;
+
+  color: white;
+
+}
+.homeImage img{
+  border-radius: 20px;
+  width: 250px;
+}
+
+
+@media (max-width: 653px) {
+  
+  .navLabel{
+    display: block;
+    cursor: pointer;
+  }
+  .navMenu ul{
+    position: fixed;
+    top: 54px;
+    bottom: 0;
+    background: rgb(9, 9, 9);
+    width: 100%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: right;
+    clip-path: circle(0 at center);
+    transition: clip-path 0.50s ease-in-out;
+  }
+  .navInput:checked + .navMenu ul{
+    clip-path: circle(100% at center);
+  }
+  .navMenu .navItem{
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    font-weight: bold;
+    }
+    .mainContainerIndex{
+      display: grid;
+      grid-template-rows: repeat(2,);
+    }
+    
+  }
